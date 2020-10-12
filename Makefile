@@ -1,5 +1,7 @@
-ts_build:
-	docker build -t ts -f ./ts/Dockerfile .
+all: ts_node_build mysql_client_build
 
-mysql_build:
-	docker build -t myc -f ./mysql/Dockerfile .
+ts_node_build:
+	docker build -t d-ts-node -f ./ts-node/Dockerfile .
+
+mysql_client_build:
+	docker build -t d-mysql-client -f ./mysql-client/Dockerfile .
