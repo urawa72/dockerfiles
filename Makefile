@@ -1,4 +1,4 @@
-all: ts_node_build mysql_client_build deno_build
+all: ts_node_build mysql_client_build rust_build
 
 ts_node_build:
 	docker build -t d-ts-node -f ./ts-node/Dockerfile .
